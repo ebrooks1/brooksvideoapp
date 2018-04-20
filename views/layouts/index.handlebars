@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{{ title }}</title>
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Teko:300,500,700" rel="stylesheet">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.15/dist/vue.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+</head>
+<body>
+	<header>
+		<img src="/images/movies_logo.png" alt="Moviesite logo" width="110"><span>Magic</span>
+		<nav>
+		</nav>
+	</header>
+
+	<main>
+		{{{ body }}}
+	</main>
+
+	<footer>
+		<span>Connect With Us On Social Media</span>
+
+		<ul>
+			<li>
+				<a><img src="/images/icon_fb.png" alt="social icon" width="40"></a>
+			</li>
+			<li>
+				<a href="https://ctt.ec/lSFm9" target="_blank" rel="noopener noreferrer"><img src="/images/icon_twitter.png" alt="social icon" width="40"></a>
+			</li>
+			<li>
+				<a><img src="/images/icon_insta.png" alt="social icon" width="40"></a>
+			</li>
+			<li>
+				<a><img src="/images/icon_yt.png" alt="social icon" width="40"></a>
+			</li>
+		</ul>
+	</footer>
+  <script>
+    var appData = {
+      movies : {{{ data }}}
+    }
+  </script>
+	{{#if mainpage}}
+  	<script src="/js/main.js"></script>
+	{{/if}}
+
+	{{#if videopage}}
+		<script src="/js/videoVM.js"></script>
+	{{/if}}
+</body>
+</html>
